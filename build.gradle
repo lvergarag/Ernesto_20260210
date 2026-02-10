@@ -19,3 +19,15 @@ dependencies {
 test {
     useJUnit()
 }
+
+
+test {
+    useJUnit()
+
+    testLogging {
+        showStandardStreams = true
+        events "started", "passed", "skipped", "failed"
+    }
+
+    outputs.upToDateWhen { false }
+}

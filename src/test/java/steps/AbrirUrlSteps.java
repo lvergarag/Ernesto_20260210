@@ -21,23 +21,21 @@ public class AbrirUrlSteps {
         driver.get(url);
     }
 
-
     @When("click en Realizar una consulta")
     public void click_en_Realizar_una_consulta() throws InterruptedException{
         basePage.hacerClickEnConsulta();
+        System.out.println("01 click en Realizar Conulta");
 
         String mensajeEsperado = "Ready to Make Your Move?";
-        System.out.println(mensajeEsperado);
+
 
         Assert.assertEquals("El mensaje de consola no es el esperado",
                 "Ready to Make Your Move?", mensajeEsperado);
     }
 
-
-
     @Then("mostrar por consola el aviso")
     public void mostrar_por_consola_el_aviso() throws InterruptedException{
-       System.out.println("Se muestra el aviso:  Ready to Make Your Move?");
+       System.out.println("02 Se muestra el aviso:  Ready to Make Your Move?");
     }
 
     @Then("validar aviso")
@@ -45,21 +43,24 @@ public class AbrirUrlSteps {
         String mensajeEsperado = "Ready to Make Your Move?";
 
         System.out.println(" ");
-        System.out.println("Text_AddProduct");
+        System.out.println("03 Text_AddProduct");
+        System.out.flush();
         String Text_AddProduct = driver.findElement(By.cssSelector("div.p-12.text-center h2.text-4xl.md\\:text-5xl.font-bold.mb-6")).getText();
         System.out.println(Text_AddProduct);
+        System.out.flush();
         System.out.println(" ");
 
+      //  Assert.assertNotEquals("El mensaje de consola NO es el esperado",
         Assert.assertEquals("El mensaje de consola NO es el esperado",
                 "Ready to Make Your Move?",
                 mensajeEsperado);
 
-        System.out.println("Validación exitosa: El aviso es correcto.");
+        System.out.println("04 Validación exitosa: El aviso es correcto.");
+
     }
 
     @Then("la pagina debe cargar")
     public void la_pagina_debe_cargar()  {
-        System.out.println("Título de la página: " + driver.getTitle());
+        System.out.println("01.1 Título de la página: " + driver.getTitle());
     }
-
 }
