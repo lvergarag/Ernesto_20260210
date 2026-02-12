@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Abrir una URL" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-02-02T23:10:28" hostname="ERNESTOKI" time="7.038">
+  <properties/>
+  <testcase name="Levantar cualquier URL" classname="Abrir una URL" time="7.038"/>
+  <system-out><![CDATA[
+Scenario: Levantar cualquier URL             # src/test/resources/features/abrir_url.feature:3
+  Given abro la url "https://www.python.com" # steps.AbrirUrlSteps.abro_la_url(java.lang.String)
+Título de la página: Python.com - Premium Domain For Sale
+  Then la pagina debe cargar                 # steps.AbrirUrlSteps.la_pagina_debe_cargar()
+]]></system-out>
+  <system-err><![CDATA[feb 02, 2026 8:10:29 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 144
+feb 02, 2026 8:10:30 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 144.0.7559.110. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

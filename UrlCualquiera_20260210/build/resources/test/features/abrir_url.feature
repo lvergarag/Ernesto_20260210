@@ -7,4 +7,3 @@ Feature: Abrir una URL
     Then mostrar por consola el aviso
     Then validar aviso
 #   Then debe esperar 5 segundos antes de cerrase
-# nuevo desde C:\Users\Usuario\IdeaProjects\Ernesto_20260210\UrlCualquiera_20260210\src\test\resources\features
