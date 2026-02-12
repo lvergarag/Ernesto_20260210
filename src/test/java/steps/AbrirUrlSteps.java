@@ -1,6 +1,7 @@
 package steps;
 
 import core.DriverManager;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,7 +34,7 @@ public class AbrirUrlSteps {
                 "Ready to Make Your Move?", mensajeEsperado);
     }
 
-    @Then("mostrar por consola el aviso")
+    @And("mostrar por consola el aviso")
     public void mostrar_por_consola_el_aviso() throws InterruptedException{
        System.out.println("02 Se muestra el aviso:  Ready to Make Your Move?");
     }
@@ -59,7 +60,7 @@ public class AbrirUrlSteps {
 
     }
 
-    @Then("la pagina debe cargar")
+    @And("la pagina debe cargar")
     public void la_pagina_debe_cargar()  {
         System.out.println("01.1 Título de la página: " + driver.getTitle());
     }
