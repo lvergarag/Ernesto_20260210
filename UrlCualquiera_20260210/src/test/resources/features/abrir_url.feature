@@ -6,4 +6,4 @@ Feature: Abrir una URL
     Then la pagina debe cargar
     Then mostrar por consola el aviso
     Then validar aviso
-#   Then debe esperar 5 segundos antes de cerrase
+#   Then debe esperar 5 segundos antes de cerrase  222
