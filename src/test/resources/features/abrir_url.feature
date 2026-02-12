@@ -17,6 +17,3 @@ Feature: Abrir una URL
   ## sdvfavhksjlbgreher
 
   #  N1
-  #  N2
-
-  #  N3
