@@ -8,15 +8,8 @@ Feature: Abrir una URL
     Then validar aviso
 
 ##  Then debe esperar 5 segundos antes de cerrase
-##   Desde Git Hub a pc escritorio persomnal
 
 
-##   push flhgldfhñkgjsdñojg
-  # cambio ernesto
-  # lucho
-  ## sdvfavhksjlbgreher
 
-  #  N1 2
-  # otra prueba ddft
-  # nuevo lvg 21222
-  # LVG 01 456789
+
+
