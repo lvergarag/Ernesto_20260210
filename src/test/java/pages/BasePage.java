@@ -19,13 +19,27 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    //    Text_AddProduct = driver.find_element(By.XPATH, "/html/body/div/div[3]/div[1]/div[1]/h1")
-
     // Agregamos 'throws InterruptedException' porque usamos sleep
     public void hacerClickEnConsulta() throws InterruptedException {
         Thread.sleep(5000); // Pausa inicial solicitada
 
         By locator = By.xpath("//*[contains(text(), 'Make an Inquiry')]");
+
+        try {
+            WebElement boton = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", boton);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", boton);
+
+            Thread.sleep(5000); // Pausa final antes de cerrar
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    public void click_en_Mas_Informacion() throws InterruptedException {
+        Thread.sleep(5000); // Pausa inicial solicitada
+
+        By locator = By.xpath("//button[@class='inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background hover:text-accent-foreground h-11 rounded-md text-lg px-8 py-6 border-primary/30 hover:border-primary/50 hover:bg-primary/5']");
 
         try {
             WebElement boton = wait.until(ExpectedConditions.presenceOfElementLocated(locator));

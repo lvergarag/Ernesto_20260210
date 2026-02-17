@@ -4,9 +4,12 @@ Feature: Abrir una URL
     Given abro la url "https://www.python.com"
     When  click en Realizar una consulta
     And la pagina debe cargar
-    And mostrar por consola el aviso
+    And mostrar aviso Ready to Make Your Move
     Then validar aviso
 
-##  Then debe esperar 5 segundos antes de cerrase
-##  LVG prueba 201-201
-
+  Scenario: Levantar cualquier URL
+    Given abro la url "https://www.python.com"
+    When  click en Mas Informacion
+    And la pagina debe cargar
+    And mostrar aviso Why Python.com
+    Then validar aviso 2
